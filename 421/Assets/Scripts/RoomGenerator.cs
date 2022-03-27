@@ -40,10 +40,6 @@ public class RoomGenerator : MonoBehaviour
             ChangePointPos();
         }
 
-        rooms[0].GetComponent<SpriteRenderer>().color = startColor;
-
-        endRoom = rooms[0].gameObject;
-
         foreach (var room in rooms)
         {
             // if(room.transform.position.sqrMagnitude > endRoom.transform.position.sqrMagnitude)
@@ -52,7 +48,6 @@ public class RoomGenerator : MonoBehaviour
             SetupRoom(room, room.transform.position);
         }
         FindEndRoom();
-        endRoom.GetComponent<SpriteRenderer>().color = endColor;
     }
 
     // Update is called once per frame

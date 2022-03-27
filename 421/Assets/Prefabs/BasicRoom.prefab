@@ -668,5 +668,6 @@ MonoBehaviour:
   roomUp: 0
   roomDown: 0
   stepToStart: 0
+  doorNumber: 0
   x: 18
   y: 9

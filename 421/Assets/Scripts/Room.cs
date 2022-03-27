@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Room : MonoBehaviour
 {
     public GameObject doorLeft, doorRight, doorUp, doorDown;
+    public GameObject wallLeft, wallRight, wallUp, wallDown;
 
     public Text text;
 
@@ -24,7 +25,10 @@ public class Room : MonoBehaviour
         doorRight.SetActive(roomRight);
         doorUp.SetActive(roomUp);
         doorDown.SetActive(roomDown);
-
+        wallLeft.SetActive(!roomLeft);
+        wallRight.SetActive(!roomRight);
+        wallUp.SetActive(!roomUp);
+        wallDown.SetActive(!roomDown);
     }
 
     // Update is called once per frame
