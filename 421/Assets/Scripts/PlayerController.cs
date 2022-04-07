@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movement;
     public float speed;
+    public int attackMode;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (attackMode == 0)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            movement.x = 0;
+            movement.y = 0;
+        }
+
+        AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
+        if(attackMode != 0 && info.normalizedTime >= 1.0f)
+            attackMode = 0;
 
         // 调整人物方向
         if (movement.x != 0)
             transform.localScale = new Vector3(movement.x, 1, 1);
+
+        // 判断攻击
+        if (Input.GetKeyDown(KeyCode.J))
+            attackMode = 1;
 
         SwitchAnim();
     }
@@ -38,5 +55,6 @@ public class PlayerController : MonoBehaviour
     {
         // 设置为movement向量的大小
         anim.SetFloat("speed", movement.magnitude);
+        anim.SetInteger("attack", attackMode);
     }
 }
