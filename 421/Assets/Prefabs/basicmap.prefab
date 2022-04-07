@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8608313152136840746}
   - component: {fileID: 7935533664030380992}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7935533664030380992
 SpriteRenderer:
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7487378961698243392, guid: 2716b650f6fa34a45a4706d7f37fbe30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3977462080999334441}
   - component: {fileID: 3616343119863652299}
   - component: {fileID: 1645373995719809999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: basicmap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4824478171631735588}
-  - {fileID: 3766737827030353522}
   - {fileID: 7630328970320032203}
   - {fileID: 1286240958519201530}
   - {fileID: 8608313152136840746}
@@ -212,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7630328970320032203}
   - component: {fileID: 4189832554039806825}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4189832554039806825
 SpriteRenderer:
@@ -272,7 +271,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1604555646431719570, guid: 2716b650f6fa34a45a4706d7f37fbe30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -294,7 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 974817297054514080}
   - component: {fileID: 182890214088390273}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +312,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &182890214088390273
 SpriteRenderer:
@@ -354,7 +353,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1033086583331792923, guid: 2716b650f6fa34a45a4706d7f37fbe30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -377,7 +376,7 @@ GameObject:
   - component: {fileID: 956844434031747249}
   - component: {fileID: 8284096012355523918}
   - component: {fileID: 1439126472117073664}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2460,7 +2459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286240958519201530}
   - component: {fileID: 3308942915626210507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2479,7 +2478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3308942915626210507
 SpriteRenderer:
@@ -2520,7 +2519,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2027247631088335886, guid: 2716b650f6fa34a45a4706d7f37fbe30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2542,7 +2541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 716133076817864017}
   - component: {fileID: 4081927812577950487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2561,7 +2560,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4081927812577950487
 SpriteRenderer:
@@ -2624,7 +2623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602987518194163466}
   - component: {fileID: 7404542731518934984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2643,7 +2642,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7404542731518934984
 SpriteRenderer:
@@ -2708,7 +2707,7 @@ GameObject:
   - component: {fileID: 6293937406529297184}
   - component: {fileID: 6334306314214282622}
   - component: {fileID: 3350670604736022045}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2728,7 +2727,7 @@ RectTransform:
   m_Children:
   - {fileID: 1891889266335901880}
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2796,36 +2795,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &6311609315469901234
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3766737827030353522}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3766737827030353522
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6311609315469901234}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2164705, y: 0.1921436, z: -19.602024}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6325126232998341067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,7 +2805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8219838574173852085}
   - component: {fileID: 1829467299644518534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2855,7 +2824,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1829467299644518534
 SpriteRenderer:
@@ -2918,7 +2887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4824478171631735588}
   - component: {fileID: 8510183306735825361}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2963,7 +2932,7 @@ GameObject:
   - component: {fileID: 1891889266335901880}
   - component: {fileID: 1041818090014737352}
   - component: {fileID: 7425372800021138377}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3043,7 +3012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4819817992242575403}
   - component: {fileID: 6912123957872828601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3062,7 +3031,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1596766495235704620}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6912123957872828601
 SpriteRenderer:
