@@ -5,15 +5,14 @@ using UnityEngine.UI;
 
 public class Room : MonoBehaviour
 {
-    public GameObject doorLeft, doorRight, doorUp, doorDown;
+    public GameObject doorLeft, doorRight, doorUp, doorDown, sq;
 
     public Text text;
 
     public bool roomLeft, roomRight, roomUp, roomDown;
     public int stepToStart;
 
-    public int doorNumber; 
-
+    public int doorNumber;
 
 
     // Start is called before the first frame update
@@ -49,6 +48,10 @@ public class Room : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
+        {
             CameraController.instance.ChangeTarget(transform);
+            sq.SetActive(true);
+        }
+            
     }
 }

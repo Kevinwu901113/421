@@ -15,7 +15,7 @@ public class RoomGenerator : MonoBehaviour
     public GameObject roomPrefab;
     public int roomNumber;
     public Color startColor, endColor;
-    private GameObject endRoom;
+    private Room endRoom;
 
     [Header("位置控制")]
     public Transform generatorPoint;
@@ -29,9 +29,9 @@ public class RoomGenerator : MonoBehaviour
 
     public List<Room> rooms = new List<Room>();
 
-    List<GameObject> farRooms = new List<GameObject>();
-    List<GameObject> lessFarRooms = new List<GameObject>();
-    List<GameObject> oneWayRooms = new List<GameObject>();
+    List<Room> farRooms = new List<Room>();
+    List<Room> lessFarRooms = new List<Room>();
+    List<Room> oneWayRooms = new List<Room>();
 
     public WallType wallType;
 
@@ -41,6 +41,7 @@ public class RoomGenerator : MonoBehaviour
         for (int i = 0; i < roomNumber; i++)
         {
             rooms.Add(Instantiate(roomPrefab,generatorPoint.position,Quaternion.identity).GetComponent<Room>());
+            rooms[i].name += i;
 
             //改变point位置
             ChangePointPos();
@@ -50,10 +51,14 @@ public class RoomGenerator : MonoBehaviour
         {
             // if(room.transform.position.sqrMagnitude > endRoom.transform.position.sqrMagnitude)
             //     endRoom = room.gameObject;
-
             SetupRoom(room, room.transform.position);
         }
+
+        rooms[0].sq.GetComponent<SpriteRenderer>().color = startColor;
+
         FindEndRoom();
+        endRoom.sq.GetComponent<SpriteRenderer>().color = endColor;
+
     }
 
     // Update is called once per frame
@@ -104,6 +109,7 @@ public class RoomGenerator : MonoBehaviour
         }
         while (Physics2D.OverlapCircle(generatorPoint.position,0.2f,roomLayer));
     }
+    
 
     public void SetupRoom(Room newRoom,Vector3 roomPosition)
     {
@@ -169,9 +175,9 @@ public class RoomGenerator : MonoBehaviour
         foreach (var room in rooms)
         {
             if(room.stepToStart == maxStep)
-                farRooms.Add(room.gameObject);
+                farRooms.Add(room);
             if(room.stepToStart == maxStep - 1)
-                lessFarRooms.Add(room.gameObject);
+                lessFarRooms.Add(room);
         }
         
         for (int i = 0; i < farRooms.Count; i++)
