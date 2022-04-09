@@ -94,50 +94,47 @@ public class RoomGenerator : MonoBehaviour
         newRoom.roomLeft = Physics2D.OverlapCircle(roomPosition + new Vector3(-xOffset, 0, 0), 0.2f, roomLayer);
         newRoom.roomRight = Physics2D.OverlapCircle(roomPosition + new Vector3(xOffset, 0, 0), 0.2f, roomLayer);
         
-        newRoom.UpdateRoom();
-        // switch(newRoom.doorNumber)
-        // {
-        //     case 1:
-        //         if(newRoom.roomUp)
-        //             Instantiate(wallType.singleU, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomDown)
-        //             Instantiate(wallType.singleD, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomLeft)
-        //             Instantiate(wallType.singleL, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomRight)
-        //             Instantiate(wallType.singleR, roomPosition, Quaternion.identity);
-        //         break;
-        //     case 2:
-        //         if(newRoom.roomLeft && newRoom.roomUp)
-        //             Instantiate(wallType.doubleUL, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomUp && newRoom.roomRight)
-        //             Instantiate(wallType.doubleUR, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomDown && newRoom.roomLeft)
-        //             Instantiate(wallType.doubleDL, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomDown && newRoom.roomRight)
-        //             Instantiate(wallType.doubleDR, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomLeft && newRoom.roomRight)
-        //             Instantiate(wallType.doubleLR, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomDown && newRoom.roomUp)
-        //             Instantiate(wallType.doubleUD, roomPosition, Quaternion.identity);
-        //         break;
-        //     case 3:
-        //         if(newRoom.roomUp)
-        //             Instantiate(wallType.tripleDLR, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomDown)
-        //             Instantiate(wallType.tirpleULR, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomLeft)
-        //             Instantiate(wallType.tripleUDR, roomPosition, Quaternion.identity);
-        //         if (newRoom.roomRight)
-        //             Instantiate(wallType.tripleUDL, roomPosition, Quaternion.identity);
-        //         break;
-        //     case 4:
-        //         Instantiate(wallType.fourDoors, roomPosition, Quaternion.identity);
-        //         break;
-
-
-
-        // }
+        newRoom.UpdateRoom(xOffset ,yOffset);
+        switch(newRoom.doorNumber)
+        {
+            case 1:
+                if(newRoom.roomUp)
+                    Instantiate(wallType.singleU, roomPosition, Quaternion.identity);
+                if (newRoom.roomDown)
+                    Instantiate(wallType.singleD, roomPosition, Quaternion.identity);
+                if (newRoom.roomLeft)
+                    Instantiate(wallType.singleL, roomPosition, Quaternion.identity);
+                if (newRoom.roomRight)
+                    Instantiate(wallType.singleR, roomPosition, Quaternion.identity);
+                break;
+            case 2:
+                if(newRoom.roomLeft && newRoom.roomUp)
+                    Instantiate(wallType.doubleUL, roomPosition, Quaternion.identity);
+                if (newRoom.roomUp && newRoom.roomRight)
+                    Instantiate(wallType.doubleUR, roomPosition, Quaternion.identity);
+                if (newRoom.roomDown && newRoom.roomLeft)
+                    Instantiate(wallType.doubleDL, roomPosition, Quaternion.identity);
+                if (newRoom.roomDown && newRoom.roomRight)
+                    Instantiate(wallType.doubleDR, roomPosition, Quaternion.identity);
+                if (newRoom.roomLeft && newRoom.roomRight)
+                    Instantiate(wallType.doubleLR, roomPosition, Quaternion.identity);
+                if (newRoom.roomDown && newRoom.roomUp)
+                    Instantiate(wallType.doubleUD, roomPosition, Quaternion.identity);
+                break;
+            case 3:
+                if(newRoom.roomLeft && newRoom.roomRight && newRoom.roomDown)
+                    Instantiate(wallType.tripleDLR, roomPosition, Quaternion.identity);
+                if (newRoom.roomUp && newRoom.roomLeft && newRoom.roomRight)
+                    Instantiate(wallType.tirpleULR, roomPosition, Quaternion.identity);
+                if (newRoom.roomUp && newRoom.roomRight && newRoom.roomDown)
+                    Instantiate(wallType.tripleUDR, roomPosition, Quaternion.identity);
+                if (newRoom.roomUp && newRoom.roomDown && newRoom.roomLeft)
+                    Instantiate(wallType.tripleUDL, roomPosition, Quaternion.identity);
+                break;
+            case 4:
+                Instantiate(wallType.fourDoors, roomPosition, Quaternion.identity);
+                break;
+        }
     }
 
     public void FindEndRoom()

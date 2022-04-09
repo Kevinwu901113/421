@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Room : MonoBehaviour
 {
     public GameObject doorLeft, doorRight, doorUp, doorDown;
-    public GameObject wallLeft, wallRight, wallUp, wallDown;
 
     public Text text;
 
@@ -15,7 +14,6 @@ public class Room : MonoBehaviour
 
     public int doorNumber; 
 
-    public float x, y;
 
 
     // Start is called before the first frame update
@@ -25,10 +23,6 @@ public class Room : MonoBehaviour
         doorRight.SetActive(roomRight);
         doorUp.SetActive(roomUp);
         doorDown.SetActive(roomDown);
-        wallLeft.SetActive(!roomLeft);
-        wallRight.SetActive(!roomRight);
-        wallUp.SetActive(!roomUp);
-        wallDown.SetActive(!roomDown);
     }
 
     // Update is called once per frame
@@ -37,9 +31,9 @@ public class Room : MonoBehaviour
         
     }
 
-    public void UpdateRoom()
+    public void UpdateRoom(float xOffset, float yOffset)
     {
-        stepToStart = (int)(Mathf.Abs(transform.position.x / x) + Mathf.Abs(transform.position.y / y));
+        stepToStart = (int)(Mathf.Abs(transform.position.x / xOffset) + Mathf.Abs(transform.position.y / yOffset));
         text.text = stepToStart.ToString();
 
         if(roomUp)
