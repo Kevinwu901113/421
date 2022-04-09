@@ -23,6 +23,9 @@ public class RoomGenerator : MonoBehaviour
     public float yOffset;
     public LayerMask roomLayer;
     public int maxStep;
+    bool minimap;
+    public GameObject mapui;
+    public GameObject minimapui;
 
     public List<Room> rooms = new List<Room>();
 
@@ -59,6 +62,21 @@ public class RoomGenerator : MonoBehaviour
         if(Input.GetKeyDown("`"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if(Input.GetKeyDown("m"))
+        {
+            if(minimap)
+            {
+                minimap = !minimap;
+                minimapui.SetActive(minimap);
+                mapui.SetActive(!minimap);
+            }
+            else
+            {
+                minimap = !minimap;
+                minimapui.SetActive(minimap);
+                mapui.SetActive(!minimap);
+            }
         }
     }
 

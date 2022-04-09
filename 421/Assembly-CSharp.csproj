@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\RoomGenerator.cs" />
      <Compile Include="Assets\Scripts\Room.cs" />
+     <Compile Include="Assets\Scripts\Wallmap.cs" />
     <Reference Include="UnityEngine">
         <HintPath>F:\unity\2020.3.32f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
