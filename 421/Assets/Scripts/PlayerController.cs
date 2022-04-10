@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
     public float speed;
     public int attackMode;
+    private float speedFactor;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,11 +50,17 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // idle状态下转换到跑动
-        if(attackMode == 0)
-            rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-        else    // 攻击状态下小幅度移动
-            rb.MovePosition(rb.position + movement * (speed * 0.1f) * Time.fixedDeltaTime);
+        if (stateInfo.IsName("run"))
+            speedFactor = 1.0f;
+        // 攻击状态下小幅度移动
+        else if (stateInfo.IsName("attack_1"))
+            speedFactor = 0.2f;
+        else if (stateInfo.IsName("attack_2"))
+            speedFactor = 0.7f;
+        else if (stateInfo.IsName("attack_3"))
+            return;
+
+        rb.MovePosition(rb.position + movement * speed * speedFactor * Time.fixedDeltaTime);
     }
 
     void SwitchAnim()
