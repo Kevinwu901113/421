@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\RoomGenerator.cs" />
     <Compile Include="Assets\Scripts\Room.cs" />
     <Compile Include="Assets\Scripts\Wallmap.cs" />
+    <Compile Include="Assets\SetNormalizeTime.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
