@@ -336,6 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   attackMode: 0
+  sp: 10
 --- !u!95 &493267664
 Animator:
   serializedVersion: 3

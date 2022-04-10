@@ -9,8 +9,10 @@ public class PlayerController : MonoBehaviour
     AnimatorStateInfo stateInfo;
 
     Vector2 movement;
+    Vector2 spMovement;
     public float speed;
     public int attackMode;
+    public int sp;
     private float speedFactor;
     // Start is called before the first frame update
     void Start()
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
             speedFactor = 0.2f;
         else if (stateInfo.IsName("attack_2"))
             speedFactor = 0.7f;
-        else if (stateInfo.IsName("attack_3"))
+        else
             return;
 
         rb.MovePosition(rb.position + movement * speed * speedFactor * Time.fixedDeltaTime);
@@ -80,7 +82,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(movement.x, 1, 1);
 
         // 攻击动画播放完
-        if ((stateInfo.IsName("attack_1") || stateInfo.IsName("attack_2")||stateInfo.IsName("attack_3"))
+        if ((stateInfo.IsName("attack_1") || stateInfo.IsName("attack_2")||stateInfo.IsName("attack_3") || stateInfo.IsName("sp_attack"))
             && stateInfo.normalizedTime > 1.0f)
         {
             attackMode = 0;
@@ -91,6 +93,12 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.J))
         {
             HandleAttack();
+        }
+
+        // 按下K使用sp攻击
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            HandleSpAttack();
         }
     }
 
@@ -113,10 +121,26 @@ public class PlayerController : MonoBehaviour
             attackMode = 3;
         }
     }
+
+    void HandleSpAttack()
+    {
+        if (sp == 0 || attackMode == 4)
+            return;
+        attackMode = 4;
+        sp = sp - 1;
+        anim.SetInteger("attack", attackMode);
+    }
     
     // 在攻击动画相应的关键帧进行攻击模式切换，可以使攻击动画更加流畅
     void GoToNextAttackAction()
     {
         anim.SetInteger("attack", attackMode);
+    }
+
+    void SpAttackMovement()
+    {
+        spMovement.x = transform.localScale.x;
+        spMovement.y = 0;
+        rb.MovePosition(rb.position + spMovement * 8.0f);
     }
 }
