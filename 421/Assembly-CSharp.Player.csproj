@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\RoomGenerator.cs" />
     <Compile Include="Assets\Scripts\Room.cs" />
+    <Compile Include="Assets\Scripts\Wallmap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
