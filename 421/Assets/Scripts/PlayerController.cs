@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
+    PolygonCollider2D[] attackColl;
     AnimatorStateInfo stateInfo;
 
     Vector2 movement;
@@ -13,12 +14,14 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public int attackMode;
     public int sp;
+    public int damage;
     private float speedFactor;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        attackColl = GetComponentsInChildren<PolygonCollider2D>();
     }
 
     // Update is called once per frame
@@ -142,5 +145,15 @@ public class PlayerController : MonoBehaviour
         spMovement.x = transform.localScale.x;
         spMovement.y = 0;
         rb.MovePosition(rb.position + spMovement * 8.0f);
+    }
+
+    void beginAttack()
+    {
+        attackColl[anim.GetInteger("attack")-1].enabled = true;
+    }
+
+    void endAttack()
+    {
+        attackColl[anim.GetInteger("attack")-1].enabled = false;
     }
 }

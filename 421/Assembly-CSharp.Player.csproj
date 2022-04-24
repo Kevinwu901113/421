@@ -56,12 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Player\PlayerAttack3.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\EnterDialog.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\RoomGenerator.cs" />
-    <Compile Include="Assets\Scripts\Room.cs" />
-    <Compile Include="Assets\Scripts\Wallmap.cs" />
     <Compile Include="Assets\SetNormalizeTime.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAttack2.cs" />
+    <Compile Include="Assets\Scripts\Room.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Minotaur.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAttack1.cs" />
+    <Compile Include="Assets\Scripts\Wallmap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
