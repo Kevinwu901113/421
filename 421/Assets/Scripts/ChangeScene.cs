@@ -9,11 +9,20 @@ public class ChangeScene : MonoBehaviour
     public GameObject loadScreen;
     public Slider slider;
     public Text text;
+    public Image enterdialog;
+    public Text textdialog;
+    Color s = new Color(0f, 0f, 0f, 0f);
+
     //切换场景1
-    public void LoadNextLevel()
+    private void Update()
     {
-        Debug.Log("1");
-        StartCoroutine(Loadlevel());
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            enterdialog.color = s;
+            enterdialog.GetComponent<RectTransform>().position = new Vector3(359,80,0);
+            textdialog.color = s;
+            StartCoroutine(Loadlevel());
+        }
     }
     IEnumerator Loadlevel()
     {
@@ -22,18 +31,18 @@ public class ChangeScene : MonoBehaviour
 
         operation.allowSceneActivation = false;
 
-        while(!operation.isDone)
+        while (!operation.isDone)
         {
             slider.value = operation.progress;
 
             text.text = operation.progress * 100 + "%";
 
-            if(operation.progress >= 0.9f)
+            if (operation.progress >= 0.9f)
             {
                 slider.value = 1;
 
                 text.text = "Press AnyKey to continue";
-                if(Input.anyKeyDown)
+                if (Input.anyKeyDown)
                 {
                     operation.allowSceneActivation = true;
                 }
@@ -42,5 +51,4 @@ public class ChangeScene : MonoBehaviour
             yield return null;
         }
     }
-    //切换场景2
 }

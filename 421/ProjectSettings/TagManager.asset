@@ -47,9 +47,9 @@ TagManager:
   - name: Wall
     uniqueID: 1939141689
     locked: 0
-  - name: Player
-    uniqueID: 930457665
-    locked: 0
   - name: Door
     uniqueID: 1937111365
+    locked: 0
+  - name: Player
+    uniqueID: 930457665
     locked: 0
