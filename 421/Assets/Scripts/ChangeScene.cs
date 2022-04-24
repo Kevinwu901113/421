@@ -19,7 +19,7 @@ public class ChangeScene : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             enterdialog.color = s;
-            enterdialog.GetComponent<RectTransform>().position = new Vector3(359,80,0);
+            enterdialog.GetComponent<RectTransform>().position = new Vector3(0,0,0);
             textdialog.color = s;
             StartCoroutine(Loadlevel());
         }
