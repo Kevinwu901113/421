@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637835481932938729
-    m_Hash: 463373532
+      ticks: 637870739269399486
+    m_Hash: 2334111438
   m_LockFileStatus:
     m_FilePath: F:/unity project/421/421/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637835482616426146
-    m_Hash: 222051107
+      ticks: 637870739269359536
+    m_Hash: 3426756970
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -130,6 +130,7 @@ m_PackageAssets:
         - 8.0.0-pre.4
         - 8.0.0
         - 8.0.1
+        - 9.0.0-pre.1
         compatible:
         - 5.1.0
         - 5.1.1
@@ -342,6 +343,7 @@ m_PackageAssets:
         - 7.0.0-pre.3
         - 7.0.0-pre.4
         - 7.0.0
+        - 8.0.0-pre.1
         compatible:
         - 4.2.0
         - 4.3.0
@@ -541,6 +543,7 @@ m_PackageAssets:
         - 8.0.0-pre.4
         - 8.0.0-pre.5
         - 8.0.0
+        - 9.0.0-pre.1
         compatible:
         - 5.2.0
         - 5.3.0
@@ -3473,6 +3476,7 @@ m_PackageAssets:
         - 1.1.0-pre.69
         - 1.2.0
         - 1.3.1
+        - 1.3.2
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3484,6 +3488,7 @@ m_PackageAssets:
         - 1.1.0-pre.69
         - 1.2.0
         - 1.3.1
+        - 1.3.2
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest
@@ -3648,6 +3653,7 @@ m_PackageAssets:
         - 7.0.0-pre.3
         - 7.0.0-pre.4
         - 7.0.0
+        - 8.0.0-pre.1
         compatible:
         - 4.1.0
         - 4.2.0

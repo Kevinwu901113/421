@@ -39,27 +39,27 @@
      <Compile Include="Assets\Scripts\Player\PlayerAttack3.cs" />
      <Compile Include="Assets\VariableInventorySystem\Standard\IStandardCaseCellData.cs" />
      <Compile Include="Assets\VariableInventorySystem\Enum\CellCondition.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryViewData.cs" />
      <Compile Include="Assets\VariableInventorySystem\Standard\StandardCaseView.cs" />
      <Compile Include="Assets\VariableInventorySystem\Sample\CaseCellData.cs" />
      <Compile Include="Assets\VariableInventorySystem\Standard\StandardCore.cs" />
-     <Compile Include="Assets\Scripts\EnterDialog.cs" />
+     <Compile Include="Assets\Scripts\Room\EnterDialog.cs" />
      <Compile Include="Assets\VariableInventorySystem\Core\VariableInventoryCore.cs" />
      <Compile Include="Assets\VariableInventorySystem\Core\VariableInventoryCell.cs" />
      <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryCellActions.cs" />
-     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Player\CameraController.cs" />
      <Compile Include="Assets\VariableInventorySystem\Standard\StandardStashView.cs" />
      <Compile Include="Assets\VariableInventorySystem\Standard\Common\StandardAssetLoader.cs" />
-     <Compile Include="Assets\Scripts\ChangeScene.cs" />
-     <Compile Include="Assets\Scripts\RoomGenerator.cs" />
+     <Compile Include="Assets\Scripts\Room\ChangeScene.cs" />
+     <Compile Include="Assets\Scripts\Room\RoomGenerator.cs" />
      <Compile Include="Assets\VariableInventorySystem\Standard\StandardCell.cs" />
      <Compile Include="Assets\SetNormalizeTime.cs" />
      <Compile Include="Assets\VariableInventorySystem\Standard\StandardStashViewData.cs" />
      <Compile Include="Assets\VariableInventorySystem\Enum\CellCorner.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack2.cs" />
      <Compile Include="Assets\VariableInventorySystem\Standard\Common\StandardAsset.cs" />
-     <Compile Include="Assets\Scripts\Room.cs" />
+     <Compile Include="Assets\Scripts\Room\Room.cs" />
      <Compile Include="Assets\Scripts\Enemy\Minotaur.cs" />
      <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryCell.cs" />
      <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryView.cs" />
@@ -72,7 +72,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerAttack1.cs" />
      <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryImageAsset.cs" />
      <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryCellData.cs" />
-     <Compile Include="Assets\Scripts\Wallmap.cs" />
+     <Compile Include="Assets\Scripts\Room\Wallmap.cs" />
     <Reference Include="UnityEngine">
         <HintPath>F:\unity\2020.3.32f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
