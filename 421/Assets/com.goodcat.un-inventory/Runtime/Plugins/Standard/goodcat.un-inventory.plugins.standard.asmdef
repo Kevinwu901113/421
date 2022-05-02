@@ -1,0 +1,16 @@
+{
+    "name": "goodcat.un-inventory.plugins.standard",
+    "references": [
+        "GUID:4ecf315b3d7c39c4da7a7009c0bfc7c7",
+        "GUID:7740292706cc9e84d8c4306708e8a2ea"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
