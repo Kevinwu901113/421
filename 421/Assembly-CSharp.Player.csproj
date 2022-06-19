@@ -57,18 +57,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\PlayerAttack3.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\EnterDialog.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\ChangeScene.cs" />
-    <Compile Include="Assets\Scripts\RoomGenerator.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\IStandardCaseCellData.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Enum\CellCondition.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryViewData.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\StandardCaseView.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Sample\CaseCellData.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\StandardCore.cs" />
+    <Compile Include="Assets\Scripts\Room\EnterDialog.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Core\VariableInventoryCore.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Core\VariableInventoryCell.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryCellActions.cs" />
+    <Compile Include="Assets\Scripts\Player\CameraController.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\StandardStashView.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\Common\StandardAssetLoader.cs" />
+    <Compile Include="Assets\Scripts\Room\ChangeScene.cs" />
+    <Compile Include="Assets\Scripts\Room\RoomGenerator.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\StandardCell.cs" />
     <Compile Include="Assets\SetNormalizeTime.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\StandardStashViewData.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Enum\CellCorner.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack2.cs" />
-    <Compile Include="Assets\Scripts\Room.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\Common\StandardAsset.cs" />
+    <Compile Include="Assets\Scripts\Room\Room.cs" />
     <Compile Include="Assets\Scripts\Enemy\Minotaur.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryCell.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryView.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Sample\SampleScene.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\StandardCaseViewData.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\StandardCaseViewPopup.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Sample\ItemCellData.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Standard\Common\StandardButton.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack1.cs" />
-    <Compile Include="Assets\Scripts\Wallmap.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryImageAsset.cs" />
+    <Compile Include="Assets\VariableInventorySystem\Core\IVariableInventoryCellData.cs" />
+    <Compile Include="Assets\Scripts\Room\Wallmap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -325,6 +349,9 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="goodcat.un-inventory.editor">
+      <HintPath>Library\ScriptAssemblies\goodcat.un-inventory.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
@@ -709,6 +736,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="sample.trade.Player.csproj">
+      <Project>{4B153D9D-C08E-DB6B-9E77-0205216D9F20}</Project>
+      <Name>sample.trade.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="goodcat.un-inventory.core.Player.csproj">
+      <Project>{C577EBBB-024B-C351-7597-3352BAC21BE0}</Project>
+      <Name>goodcat.un-inventory.core.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="goodcat.un-inventory.standard.Player.csproj">
+      <Project>{5B1A32F4-96B4-AFB7-BF74-5862D4323E04}</Project>
+      <Name>goodcat.un-inventory.standard.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="sample.hero.Player.csproj">
+      <Project>{231A2213-26BF-9C52-BD20-9602AD8219D0}</Project>
+      <Name>sample.hero.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="samples-environment.Player.csproj">
+      <Project>{3921DA42-B8D9-3E3E-57F3-256669C99CE7}</Project>
+      <Name>samples-environment.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="goodcat.un-inventory.plugins.standard.Player.csproj">
+      <Project>{9AE61AE2-3387-5ECB-FC46-F9A3759192B8}</Project>
+      <Name>goodcat.un-inventory.plugins.standard.Player</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
